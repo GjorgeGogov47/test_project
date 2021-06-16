@@ -14,8 +14,9 @@ class Customer:
             print("Boat model: " + boat_choice.model + " is unavailable.")
             return None
         
-
-
+    # Disclaimer: 
+    # Мислам дека поефикасно ќе беше конверзијата да се вршеше директно 
+    # во конструкторот, ама мислам дека има повеќе смисла да е во функција. 
     def konverzija(self):
         if self.valuta=='EUR':
             self.konvertiran=True
@@ -29,6 +30,7 @@ class Customer:
             self.konvertiran=True
     
     def rent_h(self, casovi):
+        self.boat_choice.availability=False
         cena = casovi * 10
         if self.diskont:
             cena = cena - (cena * .30)
@@ -42,6 +44,7 @@ class Customer:
             print("Boat successfully rented.")
     
     def rent_d(self, denovi):
+        self.boat_choice.availability=False
         cena = denovi * 150
         if self.diskont:
             cena = cena - (cena * .30)
@@ -55,6 +58,7 @@ class Customer:
             print("Boat successfully rented.")
     
     def rent_w(self, nedeli):
+        self.boat_choice.availability=False
         cena = nedeli * 500
         if self.diskont:
             cena = cena - (cena * .30)
