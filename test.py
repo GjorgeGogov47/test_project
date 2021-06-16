@@ -12,7 +12,6 @@ mile = Customer(100, "BAM", brod2, False)
 mile.konverzija()
 
 lista_brodovi = [brod1, brod2]
-lista_klienti = [pero, mile]
 
 boat_rental = Boat_Rental(lista_brodovi)
 boat_rental.checkout(pero, 'h', 10)
