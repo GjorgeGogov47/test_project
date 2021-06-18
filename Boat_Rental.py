@@ -15,21 +15,21 @@ class Boat_Rental:
             customer.rent_h(vreme)
 
             for brod in self.brodovi:
-                if brod.model==customer.boat_model.model:
+                if brod.model==customer.boat_choice.model:
                     brod.availability = True
             
         elif izbor=='d':
             customer.rent_d(vreme)
 
             for brod in self.brodovi:
-                if brod.model==customer.boat_model.model:
+                if brod.model==customer.boat_choice.model:
                     brod.availability = True
             
         elif izbor=='w':
             customer.rent_w(vreme)
 
             for brod in self.brodovi:
-                if brod.model==customer.boat_model.model:
+                if brod.model==customer.boat_choice.model:
                     brod.availability = True
             
         else:
